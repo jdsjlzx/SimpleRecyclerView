@@ -18,16 +18,21 @@ mOnScrollListener.setSwipeRefreshLayout(mSwipeRefreshLayout);
 Demo
 
 添加HeaderView、FooterView
+<br>
 ![](https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art1.png)
 
 支持分页加载的LinearLayout布局RecyclerView
-截屏
+<br>
+![](https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art2.png)
 
 支持分页加载的GridLayout布局RecyclerView
-截屏
+<br>
+![](https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art3.png)
 
 支持分页加载的StaggeredGridLayout布局RecyclerView
-截屏
+<br>
+![](https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art4.png)
 
 分页加载失败时的GridLayout布局RecyclerView
-截屏
+<br>
+![](https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art5.png)
