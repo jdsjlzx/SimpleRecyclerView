@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-##HeaderAndFooterRecyclerView
-
-------
-
-##介绍
-
-HeaderAndFooterRecyclerView是支持addHeaderView、 addFooterView、分页加载的RecyclerView解决方案。
-
-它可以对 RecyclerView 控件进行拓展（通过RecyclerView.Adapter实现），给RecyclerView增加HeaderView、FooterView，并且**不需要**对你的具体业务逻辑Adapter做任何修改。
-
-同时，通过修改 FooterView State，可以动态 FooterView 赋予不同状态（加载中、加载失败、滑到最底等），可以实现 RecyclerView 分页加载数据时的 Loading/TheEnd/NetWorkError 效果。
-
-##使用
-
-* 添加HeaderView、FooterView
-```java
-=======
 # SimpleRecyclerView
 基于 https://github.com/cundong/HeaderAndFooterRecyclerView 修改.
 
@@ -30,7 +12,7 @@ SimpleRecyclerView支持addHeaderView、 addFooterView、分页加载，同时�
 使用
 
 添加HeaderView、FooterView
->>>>>>> d51a1aab36caa271ac3805953d9a213a568207e0
+
         mHeaderAndFooterRecyclerViewAdapter = new HeaderAndFooterRecyclerViewAdapter(mDataAdapter);
         mRecyclerView.setAdapter(mHeaderAndFooterRecyclerViewAdapter);
 
@@ -41,16 +23,12 @@ SimpleRecyclerView支持addHeaderView、 addFooterView、分页加载，同时�
 
         //add a FooterView
         RecyclerViewUtils.setFooterView(mRecyclerView, new SampleFooter(this));
-<<<<<<< HEAD
-```
 
-* LinearLayout/GridLayout/StaggeredGridLayout布局的RecyclerView分页加载
 
-```java
+LinearLayout/GridLayout/StaggeredGridLayout布局的RecyclerView分页加载
+
 mRecyclerView.addOnScrollListener(mOnScrollListener);
-```
 
-```java
 private EndlessRecyclerOnScrollListener mOnScrollListener = new EndlessRecyclerOnScrollListener() {
 
         @Override
@@ -63,7 +41,6 @@ private RecyclerOnScrollListener mOnScrollListener = new RecyclerOnScrollListene
 
         @Override
         public void onBottom() {
->>>>>>> d51a1aab36caa271ac3805953d9a213a568207e0
 
             LoadingFooter.State state = RecyclerViewStateUtils.getFooterViewState(mRecyclerView);
             if(state == LoadingFooter.State.Loading) {
@@ -82,7 +59,7 @@ private RecyclerOnScrollListener mOnScrollListener = new RecyclerOnScrollListene
                 RecyclerViewStateUtils.setFooterViewState(EndlessLinearLayoutActivity.this, mRecyclerView, REQUEST_COUNT, LoadingFooter.State.TheEnd, null);
             }
         }
-<<<<<<< HEAD
+
     };
 ```
 ## 注意事项
@@ -114,34 +91,7 @@ private RecyclerOnScrollListener mOnScrollListener = new RecyclerOnScrollListene
 
 ![截屏][5]
 
-## 关于我
 
-* Blog: [http://my.oschina.net/liucundong/blog][6]
-* Mail: cundong.liu#gmail.com
-
-## License
-
-    Copyright 2015 Cundong
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-  [1]: https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art1.png
-  [2]: https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art2.png
-  [3]: https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art3.png
-  [4]: https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art4.png
-  [5]: https://raw.githubusercontent.com/cundong/HeaderAndFooterRecyclerView/master/art/art5.png
-  [6]: http://my.oschina.net/liucundong/blog
-=======
 
 
 解决RecyclerView与SwipeRefreshLayout滑动冲突：
@@ -155,4 +105,3 @@ mOnScrollListener.setSwipeRefreshLayout(mSwipeRefreshLayout);
 
 因此，这种情况下请使用 RecyclerViewUtils.getAdapterPosition(mRecyclerView, ViewHolder.this)、RecyclerViewUtils.getLayoutPosition(mRecyclerView, ViewHolder.this) 两个方法来替代。
 
->>>>>>> d51a1aab36caa271ac3805953d9a213a568207e0
