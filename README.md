@@ -26,16 +26,6 @@ SimpleRecyclerView支持addHeaderView、 addFooterView、分页加载，同时�
 
 
 LinearLayout/GridLayout/StaggeredGridLayout布局的RecyclerView分页加载
-
-mRecyclerView.addOnScrollListener(mOnScrollListener);
-
-private EndlessRecyclerOnScrollListener mOnScrollListener = new EndlessRecyclerOnScrollListener() {
-
-        @Override
-        public void onLoadNextPage(View view) {
-            super.onLoadNextPage(view);
-=======
-LinearLayout/GridLayout/StaggeredGridLayout布局的RecyclerView分页加载
 mRecyclerView.addOnScrollListener(mOnScrollListener);
 private RecyclerOnScrollListener mOnScrollListener = new RecyclerOnScrollListener() {
 
@@ -61,37 +51,6 @@ private RecyclerOnScrollListener mOnScrollListener = new RecyclerOnScrollListene
         }
 
     };
-```
-## 注意事项
-
-如果已经使用 ```RecyclerViewUtils.setHeaderView(mRecyclerView, view);``` 为RecyclerView添加了HeaderView，那么再调用ViewHolder类的```getAdapterPosition()```、```getLayoutPosition()```时返回的值就会因为增加了Header而受影响（返回的position等于真实的position+headerCounter）。
-
-因此，这种情况下请使用
-```RecyclerViewUtils.getAdapterPosition(mRecyclerView, ViewHolder.this)```、```RecyclerViewUtils.getLayoutPosition(mRecyclerView, ViewHolder.this)``` 两个方法来替代。
-
-## Demo
-
-* 添加HeaderView、FooterView
-
-![截屏][1]
-
-* 支持分页加载的LinearLayout布局RecyclerView
-
-![截屏][2]
-
-* 支持分页加载的GridLayout布局RecyclerView
-
-![截屏][3]
-
-* 支持分页加载的StaggeredGridLayout布局RecyclerView
-
-![截屏][4]
-
-* 分页加载失败时的GridLayout布局RecyclerView
-
-![截屏][5]
-
-
 
 
 解决RecyclerView与SwipeRefreshLayout滑动冲突：
@@ -105,3 +64,20 @@ mOnScrollListener.setSwipeRefreshLayout(mSwipeRefreshLayout);
 
 因此，这种情况下请使用 RecyclerViewUtils.getAdapterPosition(mRecyclerView, ViewHolder.this)、RecyclerViewUtils.getLayoutPosition(mRecyclerView, ViewHolder.this) 两个方法来替代。
 
+
+Demo
+
+添加HeaderView、FooterView
+截屏
+
+支持分页加载的LinearLayout布局RecyclerView
+截屏
+
+支持分页加载的GridLayout布局RecyclerView
+截屏
+
+支持分页加载的StaggeredGridLayout布局RecyclerView
+截屏
+
+分页加载失败时的GridLayout布局RecyclerView
+截屏
