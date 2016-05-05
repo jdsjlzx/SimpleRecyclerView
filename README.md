@@ -15,3 +15,19 @@ mOnScrollListener.setSwipeRefreshLayout(mSwipeRefreshLayout);
 
 因此，这种情况下请使用RecyclerViewUtils.getAdapterPosition(mRecyclerView, ViewHolder.this)、RecyclerViewUtils.getLayoutPosition(mRecyclerView, ViewHolder.this) 两个方法来替代。
 
+Demo
+
+添加HeaderView、FooterView
+截屏
+
+支持分页加载的LinearLayout布局RecyclerView
+截屏
+
+支持分页加载的GridLayout布局RecyclerView
+截屏
+
+支持分页加载的StaggeredGridLayout布局RecyclerView
+截屏
+
+分页加载失败时的GridLayout布局RecyclerView
+截屏
